@@ -20,7 +20,7 @@ import java.util.UUID;
 public class RestoreCommand {
 
     public static void register(CommandDispatcher<CommandSourceStack> dispatcher) {
-        LiteralArgumentBuilder<CommandSourceStack> literalBuilder = Commands.literal("restore").requires((commandSource) -> commandSource.hasPermission(2));
+        LiteralArgumentBuilder<CommandSourceStack> literalBuilder = Commands.literal("restore-gravestone").requires((commandSource) -> commandSource.hasPermission(2));
 
         Command<CommandSourceStack> add = (commandSource) -> {
             UUID deathID = UuidArgument.getUuid(commandSource, "death_id");
